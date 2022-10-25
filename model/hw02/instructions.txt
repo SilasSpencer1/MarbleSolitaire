@@ -1,0 +1,57 @@
+What is needed for this assignment:
+
+The ability to start a new game
+    boolean isGameOver() -> (I) MarbleSolitaireModel
+
+The ability to retrieve contents of a board
+    int getBoardSize()  -> (I) MarbleSolitaireModel
+
+The ability to retrieve a current score
+    int getScore() -> (I) MarbleSolitaireModelState
+
+The ability to know whether any moves are possible
+    boolean isGameOver() -> (I) MarbleSolitaireModel
+
+
+Class EnglishSolitaireModel (implements (I) MSM) ->
+    what it does for now:
+    -designs suitable representation of the game
+    -define arm thickness and positioning
+
+    initialize with four constructors:
+    1:
+        One that takes no parameters (A.T. = 3 -> empty slot at center)
+    2:
+        One that takes two parameters (sRow, sCol).
+
+        A.T. = 3
+        Empty Slot is at (sRow, sCol).
+            THROWS illegalArg when position is invalid
+
+
+    3:
+        One that takes A.T as the only param.
+            Open space at the cetner.
+            THROWS illegalArg if A.T. is not odd
+
+    4:
+        One that takes A.T., sRow, and sCol (AT, sRow, sCol)
+            THROWS illegalArg f the arm thickness is not a
+             positive odd number,
+             or the empty cell position is invalid.
+
+
+Methods to implement
+Move:
+    Should make the move and change board approp.
+    A valid move is one that has:
+        the ''from" and ''to" positions are valid.
+        there is a marble at the specified ''from" position.
+        the ''to" position is empty.
+        the ''to" and ''from" positions are exactly two positions away (horizontally or vertically).
+        there is a marble in the slot between the ''to" and ''from" positions
+
+isGameOver():
+    Boolean value determining if the game is over
+
+S toString():
